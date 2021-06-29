@@ -6,7 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-
+import json
 
 class AcademicInfo(models.Model):
     id = models.CharField(primary_key=True, max_length=255, db_index=True)
@@ -54,6 +54,9 @@ class BasicInfo(models.Model):
 
     def __str__(self):
         return self.name + " " + self.university
+
+    def toJSON(self):
+        return json.dumps(dict([(attr, getattr(self, attr)) for attr in [f.name for f in self._meta.fields]]))
 
 
 class ExpertIntro(models.Model):

@@ -25,7 +25,7 @@ SECRET_KEY = 'op&xxfu66sujm2@4*s$ub=*osof28#ep*f*$ewo^6q@%^h5o83'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["219.130.114.4",'127.0.0.1']
 
 
 # Application definition
@@ -81,8 +81,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'EDMS',
         'USER': 'root',
-        'PASSWORD': 'root@buaa',
-        'HOST': '111.205.121.93',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
         # 'ENGINE': 'django.db.backends.mysql',
         # # 'NAME': 'myedms',

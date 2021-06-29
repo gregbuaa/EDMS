@@ -208,6 +208,7 @@ function query_list_ajax(qi, qt, qs, r, f, rc, org) {
 			result_page_current = 1;
 
 			result_ajax_list = JSON.parse("[" + result + "]");
+			// result_ajax_list = JSON.parse( result );
 			result = result_ajax_list;
 
 			console.log(result);
